@@ -1,5 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@700&family=Montserrat:wght@500;700&display=swap");
 
+:root {
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --neutral: /*Agrega el valor de neutral aquí*/ ;
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -14,15 +23,24 @@ body {
   align-items: center;
   justify-content: center;
   /*font-family: "Montserrat", sans-serif;*/
+  background-color: var(--cream);
+  font-size: 14px;
   font-family: "Fraunces", serif;
+  transition: all 0.5s ease-in;
 }
 
 .card-container {
+  background-color: var(--white);
+  border-radius: 10px;
   width: 90%;
   max-width: 370px;
   height: 90%;
   margin: 0 auto;
-  border: solid red;
+  /* border: solid red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
 }
 
 @media screen and (min-width: 800px) {
@@ -44,7 +62,7 @@ body {
   background-size: cover;
   background-position: center;
   height: 16rem;
-  border: solid blueviolet;
+  /* border: solid blueviolet; */
   width: 100%;
 }
 
@@ -57,8 +75,64 @@ body {
   }
 }
 
+.card-data {
+  /* border: solid salmon; */
+  height: 55%;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 5px;
+}
+
+.card-data h1 {
+  font-size: 2rem;
+}
+
 .card-data h3 {
   text-transform: uppercase;
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
+  color: var(--dark-grayish-blue);
+}
+
+.card-data p {
+  color: var(--dark-grayish-blue);
+  font-family: "Montserrat", sans-serif;
+}
+
+.card-data h2 {
+  color: var(--dark-cyan);
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.card-data h2 span {
+  font-size: 1rem;
+  text-decoration: line-through;
+  color: var(--dark-grayish-blue);
+  font-family: "Montserrat", sans-serif;
+}
+
+.card-data button {
+  padding: 15px 10px;
+  background-color: var(--dark-cyan);
+  color: var(--white);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  outline: none;
+  border: 0;
+  border-radius: 5px;
+}
+
+.card-data button:hover {
+  cursor: pointer;
+  background-color: var(--very-dark-blue);
+}
+
+.card-data button img {
+  margin-right: 0.5rem;
 }

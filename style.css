@@ -36,7 +36,6 @@ body {
   max-width: 370px;
   height: 90%;
   margin: 0 auto;
-  /* border: solid red; */
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -45,7 +44,10 @@ body {
 
 @media screen and (min-width: 800px) {
   .card-container {
+    /*  border: solid red; */
     display: flex;
+    flex-direction: row;
+    gap: 1rem;
     height: 90%;
     max-width: 80%;
   }
@@ -54,6 +56,7 @@ body {
 @media screen and (min-width: 1000px) {
   .card-container {
     max-width: 70%;
+    gap: 3rem;
   }
 }
 
@@ -70,8 +73,14 @@ body {
   .card-img-container div {
     background-image: url("./images/image-product-desktop.jpg");
     background-size: cover;
-    width: 25rem;
+    width: 20rem;
     height: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .card-img-container div {
+    width: 30rem;
   }
 }
 
@@ -86,8 +95,23 @@ body {
   gap: 5px;
 }
 
+@media screen and (min-width: 800px) {
+  .card-data {
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 100%;
+    margin-right: 0.5rem;
+    /* align-items: flex-start; */
+  }
+}
+
 .card-data h1 {
   font-size: 2rem;
+}
+@media screen and (min-width: 800px) {
+  .card-data h1 {
+    font-size: 2.6rem;
+  }
 }
 
 .card-data h3 {
@@ -95,11 +119,24 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: var(--dark-grayish-blue);
+  letter-spacing: 5px;
+}
+
+@media screen and (min-width: 800px) {
+  .card-data h3 {
+    font-size: 1.3rem;
+  }
 }
 
 .card-data p {
   color: var(--dark-grayish-blue);
   font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 800px) {
+  .card-data p {
+    font-size: 18px;
+  }
 }
 
 .card-data h2 {
@@ -110,11 +147,23 @@ body {
   gap: 0.5rem;
 }
 
+@media screen and (min-width: 800px) {
+  .card-data h2 {
+    font-size: 2.5rem;
+  }
+}
+
 .card-data h2 span {
   font-size: 1rem;
   text-decoration: line-through;
   color: var(--dark-grayish-blue);
   font-family: "Montserrat", sans-serif;
+}
+
+@media screen and (min-width: 800px) {
+  .card-data h2 span {
+    font-size: 1.5rem;
+  }
 }
 
 .card-data button {
@@ -126,6 +175,13 @@ body {
   outline: none;
   border: 0;
   border-radius: 5px;
+  max-width: 312px;
+}
+
+@media screen and (min-width: 800px) {
+  .card-data button {
+    padding: 18px 15px;
+  }
 }
 
 .card-data button:hover {
